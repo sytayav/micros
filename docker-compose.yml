@@ -1,0 +1,17 @@
+version: '3.9'
+
+services:
+
+  joke_api_service:
+    restart: on-failure
+    container_name: joke_api_service
+    build: joke_api_service/
+    ports:
+      - "8001:80"
+
+  joke_service:
+    restart: on-failure
+    container_name: joke_service
+    build: joke_service/
+    ports:
+      - "8000:80"
