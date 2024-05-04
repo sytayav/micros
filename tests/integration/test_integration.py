@@ -24,12 +24,12 @@ async def test_database_connection():
 
 
 @pytest.mark.asyncio
-async def test_car_api_service_connection():
+async def test_joke_api_service_connection():
     r = await joke_api_status()
     assert r == {'message': 'Service alive'}
 
 
 @pytest.mark.asyncio
-async def test_auto_shop_service_connection():
+async def test_joke_service_connection():
     r = await joke_status()
     assert r == {'message': 'Service alive'}
